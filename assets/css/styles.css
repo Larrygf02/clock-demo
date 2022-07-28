@@ -201,4 +201,9 @@ a {
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
     color: var(--text-color-light);
+    transition: .3s;
+}
+
+.clock__logo:hover {
+    color: var(--first-color);
 }
