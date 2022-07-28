@@ -70,3 +70,73 @@ a {
 .grid {
     display: grid;
 }
+
+/* Clock */
+.clock__container {
+    height: 100vh;
+    grid-template-rows: 1fr max-content;
+}
+
+.clock__circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-shadow: -6px -6px 16px var(--white-color),
+                6px 6px 16px hsl(var(--hue-color), 30%, 86%, 1),
+                inset 6px 6px 16px hsl(var(--hue-color), 30%, 86%, 1),
+                inset -6px -6px 16px var(--white-color);
+    border-radius: 50%;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock__content {
+    align-self: center;
+    row-gap: 3.5rem;
+}
+
+.clock__twelve,
+.clock__three,
+.clock__six,
+.clock__nine {
+    position: absolute;
+    width: 1rem;
+    height: 1px;
+    background-color: var(--text-color-light);
+}
+
+.clock__twelve,
+.clock__six {
+    transform: translate(-50%) rotate(90deg);
+}
+
+.clock__twelve {
+    top: 1.25rem;
+    left: 50%;
+}
+
+.clock__three {
+    top: 50%;
+    right: .75rem;
+}
+
+.clock__six {
+    bottom: 1.25rem;
+    left: 50%;
+}
+
+.clock__nine {
+    left: .75rem;
+    top: 50%;
+}
+
+.clock__rounder {
+    width: .75rem;
+    height: .75rem;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    border: 2px solid var(--body-color);
+    z-index: var(--z-tooltip);
+}
