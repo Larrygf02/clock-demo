@@ -15,3 +15,47 @@ const clock = () => {
 }
 
 setInterval(clock,1000)
+
+/* TEXT */
+const textHour = document.getElementById('text-hour')
+const text_minute = document.getElementById('text-minutes')
+const text_ampm = document.getElementById('text-ampm')
+const date_day = document.getElementById('date-day')
+const date_month = document.getElementById('date-month')
+const date_year = document.getElementById('date-year')
+
+const clockText = () => {
+    let date = new Date()
+
+    let hh = date.getHours()
+    let mm = date.getMinutes()
+    let dat = date.getDate()
+    let month = date.getMonth()
+    let year = date.getFullYear()
+    let ampm
+
+    if (hh >= 12) {
+        hh = hh - 12
+        ampm = 'PM'
+    }else {
+        ampm = 'AM'
+    }
+
+    if (hh == 0) {
+        hh = 12
+    }
+    
+    if (hh < 10) {
+        hh = `0${hh}`
+    }
+
+    textHour.innerHTML = `${hh}:`
+
+    if (mm < 10) {
+        mm = `0${mm}`
+    }
+    text_minute.innerHTML = `${mm}`
+    text_ampm.innerHTML = ampm
+}
+
+setInterval(clockText, 1000)
