@@ -49,6 +49,18 @@ body.dark-theme {
     --body-color:hsl(var(--hue-color), 10%, 16%);
 }
 
+.dark-theme .clock__circle {
+    box-shadow: 6px 6px 16px hsla(var(--hue-color), 8%, 12%, 1),
+                -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1),
+                inset -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1),
+                inset 6px 6px 12px hsla(var(--hue-color), 8%, 12%, 1);
+}
+
+.dark-theme .clock__theme {
+    box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 8%, 20%, 1),
+                inset 1px 1px 1px hsla(var(--hue-color), 8%, 12%, 1)
+}
+
 /* Base */
 * {
     box-sizing: border-box;
