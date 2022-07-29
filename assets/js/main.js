@@ -58,8 +58,6 @@ const clockText = () => {
     text_ampm.innerHTML = ampm
 
     let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    console.log(day)
-    console.log(`${months[month]}`)
     date_day.innerHTML = day
     date_month.innerHTML = `${months[month]}`
     date_year.innerHTML = year
