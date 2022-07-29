@@ -29,7 +29,7 @@ const clockText = () => {
 
     let hh = date.getHours()
     let mm = date.getMinutes()
-    let dat = date.getDate()
+    let day = date.getDate()
     let month = date.getMonth()
     let year = date.getFullYear()
     let ampm
@@ -56,6 +56,13 @@ const clockText = () => {
     }
     text_minute.innerHTML = `${mm}`
     text_ampm.innerHTML = ampm
+
+    let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    console.log(day)
+    console.log(`${months[month]}`)
+    date_day.innerHTML = day
+    date_month.innerHTML = `${months[month]}`
+    date_year.innerHTML = year
 }
 
 setInterval(clockText, 1000)
