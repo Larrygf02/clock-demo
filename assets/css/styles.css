@@ -42,6 +42,13 @@
     }
 }
 
+/* Variable dark theme */
+body.dark-theme {
+    --title-color: hsl(var(--hue-color), 12%, 95%);
+    --text-color: hsl(var(--hue-color), 12%, 75%);
+    --body-color:hsl(var(--hue-color), 10%, 16%);
+}
+
 /* Base */
 * {
     box-sizing: border-box;
@@ -231,4 +238,17 @@ a {
     text-align: center;
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
+}
+
+.clock__theme {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    display: flex;
+    padding: .25rem;
+    border-radius: 50%;
+    box-shadow: inset -1px -1px 1px hsl(var(--hue-color), 0%, 100%, 1),
+                inset 1px 1px 1px hsl(var(--hue-color), 30%, 86%, 1);
+    color: var(--first-color);
+    cursor: pointer
 }
