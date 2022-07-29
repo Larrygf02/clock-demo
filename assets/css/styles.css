@@ -42,12 +42,7 @@
     }
 }
 
-@media screen and (min-width: 968px) {
-    .container {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+
 
 /* Variable dark theme */
 body.dark-theme {
@@ -117,7 +112,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .4s;
+    transition: .4s ;
 }
 
 .clock__content {
@@ -272,4 +267,11 @@ a {
                 inset 1px 1px 1px hsl(var(--hue-color), 30%, 86%, 1);
     color: var(--first-color);
     cursor: pointer
+}
+
+@media screen and (min-width: 968px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
